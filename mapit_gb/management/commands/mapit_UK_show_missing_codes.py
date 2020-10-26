@@ -18,7 +18,7 @@ class Command(BaseCommand):
             help="The list of area types to search for",
             # These types are from
             # http://github.com/alphagov/imminence/blob/26f6c9e5969a9e09bd24d6e2e4ebfe55dba1d997/config/routes.rb#L13
-            # except for COI which is used in Frontend:
+            # except for COI which is used in Frontend: 
             # https://github.com/alphagov/frontend/blob/aed183cf3ed6a1e77cf3ec11f7dd6c238a7557cf/lib/location_identifier.rb#L4
             default="EUR,CTY,DIS,LBO,LGD,MTD,UTA,COI",
         )
@@ -29,7 +29,7 @@ class Command(BaseCommand):
             generation_low__lte=current_generation,
             generation_high__gte=current_generation
         )
-        print '{count} areas in current generation ({gen_id})\n'.format(
+        print'{count} areas in current generation ({gen_id})\n'.format(
             count=current_areas.count(),
             gen_id=current_generation.id
         )
