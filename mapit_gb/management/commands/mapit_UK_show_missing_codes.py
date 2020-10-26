@@ -29,7 +29,7 @@ class Command(BaseCommand):
             generation_low__lte=current_generation,
             generation_high__gte=current_generation
         )
-        print'{count} areas in current generation ({gen_id})\n'.format(
+        print '{count} areas in current generation ({gen_id})\n'.format(
             count=current_areas.count(),
             gen_id=current_generation.id
         )
