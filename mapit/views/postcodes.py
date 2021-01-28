@@ -55,7 +55,6 @@ class GeometryCentroidDistance(Func):
             expression, PostGISAdapter(geom), output_field=FloatField(), **extra)
 
 
-@ratelimit
 def postcode(request, postcode, format=None):
     if hasattr(countries, 'canonical_postcode'):
         canon_postcode = countries.canonical_postcode(postcode)
