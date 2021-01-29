@@ -55,6 +55,7 @@ setup(
         'libsass',
         'psycopg2',
         'PyYAML',
+        'raven',
         'Shapely',
         'six',
         'uk-postcode-utils',
