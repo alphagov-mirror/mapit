@@ -64,6 +64,7 @@ jobs:
       run: tox
       env:
         THING_TO_TEST: ${{ matrix.thing-to-test }}
+        GOVUK_ENV: test
 
     - name: Upload code coverage
       run: codecov
