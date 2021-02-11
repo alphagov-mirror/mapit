@@ -38,7 +38,7 @@ def read_file(filename):
 
 setup(
     name='django-mapit',
-    version='2.0',
+    version='3.0',
     description=(
         'A web service for mapping postcodes and points to current or past '
         'administrative area information and polygons.'),
@@ -55,7 +55,9 @@ setup(
         'libsass',
         'psycopg2',
         'PyYAML',
+        'raven',
         'Shapely',
+        'six',
         'uk-postcode-utils',
     ],
     classifiers=[
