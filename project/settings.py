@@ -66,7 +66,7 @@ else:
         }
     except ImportError:
         pass
-    CACHE_MIDDLEWARE_SECONDS = 86400
+    CACHE_MIDDLEWARE_SECONDS = 2419200  # 4 weeks
     CACHE_MIDDLEWARE_KEY_PREFIX = config.get('MAPIT_DB_NAME')
 
 if config.get('BUGS_EMAIL'):
