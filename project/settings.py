@@ -60,13 +60,13 @@ else:
         CACHES = {
             'default': {
                 'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-                'LOCATION': '127.0.0.1:11211',
+                'LOCATION': os.environ.get('MEMCACHE_SERVERS', '127.0.0.1:11211'),
                 'TIMEOUT': 86400,
             }
         }
     except ImportError:
         pass
-    CACHE_MIDDLEWARE_SECONDS = 86400
+    CACHE_MIDDLEWARE_SECONDS = 2419200  # 4 weeks
     CACHE_MIDDLEWARE_KEY_PREFIX = config.get('MAPIT_DB_NAME')
 
 if config.get('BUGS_EMAIL'):
