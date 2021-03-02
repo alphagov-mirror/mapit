@@ -263,7 +263,7 @@ Arrange to have the file you just created uploaded to the
 the new data has been uploaded to, and ensure that it's permission is set to `public`.
 
 
-### Test a server in Staging
+### 3. Test a server in Staging
 
 **NB: THIS REQUIRES ACCESS TO GOV.UK PRODUCTION**
 
@@ -288,7 +288,7 @@ script](https://github.com/alphagov/fabric-scripts/blob/master/mapit.py#L10):
 We can happily survive with one mapit-server in an environment while
 this is done.
 
-### <a name="update-servers-with-new-database">Update production servers with new database</a>
+### <a name="update-servers-with-new-database">4. Update production servers with new database</a>
 
 Now that you are happy with the changes in `staging`, you can now follow update
 the servers in `production`.
