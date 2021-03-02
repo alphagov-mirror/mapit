@@ -273,6 +273,10 @@ to refer to your new file, see [this example PR](https://github.com/alphagov/map
 Submit change as a PR against [Mapit](https://github.com/alphagov/mapit) and
 deploy following the normal process to `staging`.
 
+Before you can test updated data you will need to clear the shared cache. Refer
+to [these docs](https://docs.publishing.service.gov.uk/manual/mapit-cache.html) on how
+to clear the cache.
+
 > Testing on integration may not be as accurate as staging so we recommend testing on staging
 
 Now that your changes have been deployed, you can test the new database in
@@ -297,6 +301,10 @@ the servers in `production`.
 in staging. If a new Mapit machine gets created in AWS, it will automatically
 try importing the data from the new database.**
 
+Remember to clear the shared cache otherwise old data may still be served.
+Refer to [these
+docs](https://docs.publishing.service.gov.uk/manual/mapit-caches.html) on how
+to clear the cache.
 
 ## Troubleshooting
 
