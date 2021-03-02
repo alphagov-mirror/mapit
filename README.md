@@ -53,11 +53,11 @@ To run management commands in other environments, you'll need the `GOVUK_ENV` en
 
 ### Importing data
 
-Please see [the importing data instructions](./IMPORTING-DATA.md)
+Please see [the importing data instructions](./docs/importing-data.md)
 
 ### Testing a server with new data
 
-Please see [testing a server with an updated Mapit database](./TESTING-SERVER.md)
+Please see [testing a server with an updated Mapit database](./docs/testing-server.md)
 
 ### Running the test suite
 

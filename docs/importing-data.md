@@ -74,7 +74,7 @@ This consists of the [Office for National Statistics Postcode Database (ONSPD)](
       `ESRI Shapefile` format to download
   3.  **ONSI data** - For the ONSI data we now point to Mysociety's URL in the
       [check-onsi-downloads](https://github.com/alphagov/mapit-scripts/blob/master/check-osni-downloads#L18) script, as there have not been any changes since December 2015.
-      It's still worth checking if there are any updates. See [about datasets](/ABOUT-DATASETS.md) for more information.
+      It's still worth checking if there are any updates. See [about datasets](./docs/about-datasets.md) for more information.
 
 
 #### <a name="upload-latest-data">1.3 Upload the latest data to Amazon S3</a>
@@ -277,7 +277,7 @@ deploy following the normal process to `staging`.
 
 Now that your changes have been deployed, you can test the new database in
 `AWS staging` before moving to `production`. See [Testing a server with an
-updated Mapit database](/TESTING-SERVER.md).
+updated Mapit database](./docs/testing-server.md).
 
 Once you have tested that a new mapit node works as expected, you can
 update each mapit node in turn using a [fabric
