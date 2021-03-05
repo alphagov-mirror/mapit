@@ -74,7 +74,7 @@ This consists of the [Office for National Statistics Postcode Database (ONSPD)](
       `ESRI Shapefile` format to download
   3.  **ONSI data** - For the ONSI data we now point to Mysociety's URL in the
       [check-onsi-downloads](https://github.com/alphagov/mapit-scripts/blob/master/check-osni-downloads#L18) script, as there have not been any changes since December 2015.
-      It's still worth checking if there are any updates. See [about datasets](/ABOUT-DATASETS.md) for more information.
+      It's still worth checking if there are any updates. See [about datasets](./docs/about-datasets.md) for more information.
 
 
 #### <a name="upload-latest-data">1.3 Upload the latest data to Amazon S3</a>
@@ -263,7 +263,7 @@ Arrange to have the file you just created uploaded to the
 the new data has been uploaded to, and ensure that it's permission is set to `public`.
 
 
-### Test a server in Staging
+### 3. Test a server in Staging
 
 **NB: THIS REQUIRES ACCESS TO GOV.UK PRODUCTION**
 
@@ -273,11 +273,15 @@ to refer to your new file, see [this example PR](https://github.com/alphagov/map
 Submit change as a PR against [Mapit](https://github.com/alphagov/mapit) and
 deploy following the normal process to `staging`.
 
+Before you can test updated data you will need to clear the shared cache. Refer
+to [these docs](https://docs.publishing.service.gov.uk/manual/mapit-cache.html) on how
+to clear the cache.
+
 > Testing on integration may not be as accurate as staging so we recommend testing on staging
 
 Now that your changes have been deployed, you can test the new database in
 `AWS staging` before moving to `production`. See [Testing a server with an
-updated Mapit database](/TESTING-SERVER.md).
+updated Mapit database](./docs/testing-server.md).
 
 Once you have tested that a new mapit node works as expected, you can
 update each mapit node in turn using a [fabric
@@ -288,7 +292,7 @@ script](https://github.com/alphagov/fabric-scripts/blob/master/mapit.py#L10):
 We can happily survive with one mapit-server in an environment while
 this is done.
 
-### <a name="update-servers-with-new-database">Update production servers with new database</a>
+### <a name="update-servers-with-new-database">4. Update production servers with new database</a>
 
 Now that you are happy with the changes in `staging`, you can now follow update
 the servers in `production`.
@@ -297,6 +301,10 @@ the servers in `production`.
 in staging. If a new Mapit machine gets created in AWS, it will automatically
 try importing the data from the new database.**
 
+Remember to clear the shared cache otherwise old data may still be served.
+Refer to [these
+docs](https://docs.publishing.service.gov.uk/manual/mapit-caches.html) on how
+to clear the cache.
 
 ## Troubleshooting
 
