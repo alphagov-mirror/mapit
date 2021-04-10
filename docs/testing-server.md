@@ -50,7 +50,7 @@ let's grab all the relevant responses from yesterday's log:
     $ mapit-1> sudo awk '$9==404 {print "http://localhost:3108" $7}' /var/log/nginx/mapit-access.log | sort | uniq >mapit-404s
     $ mapit-1> sudo awk '$9==302 {print "http://localhost:3108" $7}' /var/log/nginx/mapit-access.log | sort | uniq >mapit-302s
 
-> In the commands above, for every line where the 9th field is ‘200’, print the string “http://localhost:3108” followed by the 7th field of that line, which is the postcode.
+> In the commands above, for every line where the 9th field is "200", print the string "http://localhost:3108" followed by the 7th field of that line, which is the postcode.
 
 Download the files via the jumpbox and store in your /Downloads folder, e.g.
 
